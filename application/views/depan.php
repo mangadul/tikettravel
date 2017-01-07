@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="
+TRAVEL BANDUNG KEBUMEN (PP), TRAVEL BANDUNG TEMANGGUNG (PP), TRAVEL BANDUNG – GOMBONG (PP), TRAVEL BANDUNG MAGELANG (PP), TRAVEL BANDUNG – KENDAL (PP), TRAVEL BANDUNG – PEMALANG (PP), TRAVEL BANDUNG – TEGAL (PP), TRAVEL BANDUNG – PURWOKERTO (PP), TRAVEL BANDUNG – SOLO (PP), TRAVEL BANDUNG- WONOSOBO (PP), TRAVEL BANDUNG – YOGYAKARTA VIA SELATAN (PP), TRAVEL BANDUNG – YOGYAKARTA (PP), DAFTAR HARGA TICKET, TRAVEL BANDUNG – SALATIGA .PP, TRAVEL BANDUNG – BOYOLALI (PP)" />
     <meta name="author" content="">
     <title>DALTrans Travel</title>
     <!-- Bootstrap Core CSS -->
@@ -25,6 +26,14 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MVKVTVP');</script>
+    <!-- End Google Tag Manager -->
 
 </head>
 
@@ -75,6 +84,7 @@
             <div class="intro-text">
                 <div class="intro-lead-in">Selamat Datang di DALTrans Travel!</div>
                 <div class="intro-heading">Layanan cloud Travel</div>
+                <div class="intro-lead-in">Untuk tujuan Bandung - Jawa Tengah dan sekitarnya</div>
                 <a href="#services" class="page-scroll btn btn-xl">Layanan Kami</a>
             </div>
         </div>
@@ -96,15 +106,15 @@
                         <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">Travel</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <p class="text-muted">Layanan Travel untuk tujuan Bandung - Jawa Tengah (Tegal, Brebes, Pekalongan, Kendal, Semarang, Temanggung, Banjarnegara, Wonosobo, Salatiga, Boyolali, Solo, Jogjakarta, Magelang). CSO: 022 – 85240634 – 0812 2002 3869, SMS :    0812 2002 3869 – 0822 2138 8874</p>
                 </div>
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading">Paket</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <h4 class="service-heading">Kiriman Paket Semalam</h4>
+                    <p class="text-muted">Jasa titipan kilat untuk kiriman paket satu malam adalah salah satu layanan utama kami. Kiriman anda dijamin sampai pagi atau siang di pool kami.</p>
                 </div>
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
@@ -240,20 +250,6 @@
                         <p class="text-muted">Website Design</p>
                     </div>
                 </div>                                
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="<?php echo base_url('assets/images/portfolio/dreams.png');?>" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Salatiga</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
-                </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
@@ -563,7 +559,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; Your Website 2016</span>
+                    <span class="copyright">&copy; <?php echo date("Y");?> - <a href="<?php echo base_url();?>">DALTrans Travel</a> - CSO : 022 – 85240634 – 0812 2002 3869 / SMS: 0812 2002 3869 – 0822 2138 8874</span>
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline social-buttons">
@@ -784,6 +780,11 @@
 
     <!-- Theme JavaScript -->
     <script src="<?php echo base_url('assets/js/agency.min.js'); ?>"></script>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MVKVTVP"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
 </body>
 
