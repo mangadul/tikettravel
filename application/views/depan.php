@@ -4,10 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="
-TRAVEL BANDUNG KEBUMEN (PP), TRAVEL BANDUNG TEMANGGUNG (PP), TRAVEL BANDUNG – GOMBONG (PP), TRAVEL BANDUNG MAGELANG (PP), TRAVEL BANDUNG – KENDAL (PP), TRAVEL BANDUNG – PEMALANG (PP), TRAVEL BANDUNG – TEGAL (PP), TRAVEL BANDUNG – PURWOKERTO (PP), TRAVEL BANDUNG – SOLO (PP), TRAVEL BANDUNG- WONOSOBO (PP), TRAVEL BANDUNG – YOGYAKARTA VIA SELATAN (PP), TRAVEL BANDUNG – YOGYAKARTA (PP), DAFTAR HARGA TICKET, TRAVEL BANDUNG – SALATIGA .PP, TRAVEL BANDUNG – BOYOLALI (PP)" />
+    <meta name="description" content="TRAVEL BANDUNG KEBUMEN (PP), TRAVEL BANDUNG TEMANGGUNG (PP), TRAVEL BANDUNG – GOMBONG (PP), TRAVEL BANDUNG MAGELANG (PP), TRAVEL BANDUNG – KENDAL (PP), TRAVEL BANDUNG – PEMALANG (PP), TRAVEL BANDUNG – TEGAL (PP), TRAVEL BANDUNG – PURWOKERTO (PP), TRAVEL BANDUNG – PEKALONGAN (PP), TRAVEL BANDUNG – SOLO (PP), TRAVEL BANDUNG- WONOSOBO (PP), TRAVEL BANDUNG – YOGYAKARTA VIA SELATAN (PP), TRAVEL BANDUNG – YOGYAKARTA (PP), TRAVEL BANDUNG BREBES (PP), DAFTAR HARGA TIKET BANDUNG JAWA TENGAH, TRAVEL BANDUNG – SALATIGA (PP), TRAVEL BANDUNG – BOYOLALI (PP)" />
     <meta name="author" content="">
-    <title>DALTrans Travel</title>
+    <title>DALTrans Travel - Travel Bandung Jawa Tengah</title>
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
     <!-- Custom Fonts -->
@@ -134,7 +133,7 @@ TRAVEL BANDUNG KEBUMEN (PP), TRAVEL BANDUNG TEMANGGUNG (PP), TRAVEL BANDUNG – 
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Harga Tiket</h2>
-                    <h3 class="section-subheading text-muted">Tambahan 35.000 untuk biaya antar jemput untuk wilayah Kota Bandung.</h3>
+                    <h3 class="section-subheading text-muted">Tambahan biaya penjemputan diberlakukan untuk lokasi jemputan yang berada di luar wilayah kota Bandung.</h3>
                 </div>
             </div>
             <div class="row">
@@ -306,22 +305,56 @@ TRAVEL BANDUNG KEBUMEN (PP), TRAVEL BANDUNG TEMANGGUNG (PP), TRAVEL BANDUNG – 
                         <p class="text-muted">Website Design</p>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="<?php echo base_url('assets/images/portfolio/dreams.png');?>" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Kendal</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
-                </div>
             </div>
         </div>
+
+    <div class="container">
+      <h2>Daftar Harga Tiket</h2>
+      <p>Daftar harga tiket saat ini per <?php echo date("M Y");?></p>            
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Keberangkatan Dari</th>
+            <th>Tujuan</th>
+            <th>Harga</th>
+          </tr>
+        </thead>
+        <tbody>
+        <?php 
+        foreach($harga as $k=>$v) {
+        ?>
+          <tr>
+            <td><?php echo $v['asal']; ?></td>
+            <td><?php echo $v['tujuan']; ?></td>
+            <td><?php echo number_format($v['harga_tiket'], 0, ',', '.'); ?></td>
+          </tr>
+          <?php } ?>
+        </tbody>
+      </table>
+    </div>
+
+<div class="container">
+<h2>KETENTUAN :</h2>
+<ol>
+    <li>
+    Bagasi 5 kg/ org , apabila melebihi dari aturan yang sudah ditentukan dikenakan biaya tambahan sesuai ketentuan yang berlaku.    
+    </li>
+    <li>
+        Para penumpang harus siap 2 jam sebelum keberangkatan.    
+    </li>
+    <li>
+        Ticket yang sudah dibeli tidak dapat dibatalkan.
+    </li>
+    <li>
+        Dilarang membawa barang larangan, hewan dan barang yang baunya menggangu                        penumpang lain.
+    </li>
+    <li>
+        Bilamana saat penjemputan penumpang belum siap maka tidak ada penjemputan ulang dan anda dimohon kedatangannya dikantor kami 30 menit sebelum jam keberangkatan.
+    </li>
+
+</ol>
+</div>
+
     </section>
 
     <!-- About Section -->
@@ -508,7 +541,7 @@ TRAVEL BANDUNG KEBUMEN (PP), TRAVEL BANDUNG TEMANGGUNG (PP), TRAVEL BANDUNG – 
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <form name="sentMessage" id="contactForm" novalidate>
+                    <form name="sentMessage" action="<?php echo base_url('tiket/'); ?>" id="contactForm" novalidate>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -525,9 +558,27 @@ TRAVEL BANDUNG KEBUMEN (PP), TRAVEL BANDUNG TEMANGGUNG (PP), TRAVEL BANDUNG – 
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" name="tujuan" class="form-control" placeholder="Tujuan" id="tujuan" required data-validation-required-message="Masukan Tujuan anda.">
-                                    <p class="help-block text-danger"></p>
+                                <div class="row">                            
+                                    <div class="col-md-6">
+                                        <div class="form-group">                                    
+                                        <select name="kota_asal">
+                                            <option value="1">Bandung</option>
+                                        </select>
+                                        </div>
+
+                                        <div class="form-group">                                    
+                                        <select name="kota_tujuan">
+                                            <option value="1">Solo</option>
+                                        </select>
+                                        </div>
+
+                                        <!--
+                                        <input type="text" name="asal" class="form-control" placeholder="Asal" id="asal" required data-validation-required-message="Masukan Asal Keberangkatan anda.">
+                                        <p class="help-block text-danger"></p>
+                                        <input type="text" name="tujuan" class="form-control" placeholder="Tujuan" id="tujuan" required data-validation-required-message="Masukan Tujuan anda.">
+                                        <p class="help-block text-danger"></p>
+                                        -->
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <input type="text" name="jml_penumpang" class="form-control" placeholder="Jumlah penumpang" id="jml_orang" required data-validation-required-message="Jumlah penumpang">

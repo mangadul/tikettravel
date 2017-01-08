@@ -77,7 +77,11 @@ $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
 	'username' => 'root',
+<<<<<<< HEAD
 	'password' => 'R4h4Z14%$#@!',
+=======
+	'password' => '',
+>>>>>>> b60dd5650b83cd5dd9ed40a0496c6808c9729285
 	'database' => 'daltrans',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
